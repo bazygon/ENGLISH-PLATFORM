@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>English B2 Master — platforma nauki angielskiego</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">B2</div>
+        <div>
+          <h1>English B2 Master</h1>
+          <p>Interaktywna platforma nauki</p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-link active" data-view="dashboard">Dashboard</button>
+        <button class="nav-link" data-view="placement">Test poziomujący</button>
+        <button class="nav-link" data-view="practice">Practice mode</button>
+        <button class="nav-link" data-view="exam">Symulator egzaminu</button>
+        <button class="nav-link" data-view="flashcards">Fiszki B2</button>
+        <button class="nav-link" data-view="mistakes">Powtórka błędów</button>
+        <button class="nav-link" data-view="stats">Statystyki</button>
+      </nav>
+
+      <div class="sidebar-card">
+        <h3>Zakres platformy</h3>
+        <ul>
+          <li>wybór odpowiedzi</li>
+          <li>tłumaczenia PL → EN</li>
+          <li>transformacje zdań</li>
+          <li>reading B2</li>
+          <li>wyjaśnienia do odpowiedzi</li>
+          <li>zapis postępów</li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Poziom docelowy</p>
+          <h2>Angielski B2 — kurs i baza egzaminacyjna</h2>
+        </div>
+        <div class="topbar-actions">
+          <button id="resetProgressBtn" class="ghost-btn">Reset postępów</button>
+        </div>
+      </header>
+
+      <section id="view-dashboard" class="view active"></section>
+      <section id="view-placement" class="view"></section>
+      <section id="view-practice" class="view"></section>
+      <section id="view-exam" class="view"></section>
+      <section id="view-flashcards" class="view"></section>
+      <section id="view-mistakes" class="view"></section>
+      <section id="view-stats" class="view"></section>
+    </main>
+  </div>
+
+  <template id="hero-template">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="pill">B2 intensive system</span>
+        <h3>Pełnoprawna webówka do nauki angielskiego — skoncentrowana na realnym poziomie B2.</h3>
+        <p>
+          Platforma łączy test poziomujący, tryb ćwiczeń, tłumaczenia, Use of English,
+          transformacje, czytanie ze zrozumieniem i analizę błędów. Wszystko działa lokalnie w przeglądarce.
+        </p>
+        <div class="hero-actions">
+          <button class="primary-btn quick-start" data-target="placement">Rozpocznij test B2</button>
+          <button class="secondary-btn quick-start" data-target="practice">Przejdź do ćwiczeń</button>
+          <button class="secondary-btn quick-start" data-target="flashcards">Ucz się z fiszek</button>
+        </div>
+      </div>
+      <div class="hero-stats" id="heroStats"></div>
+    </section>
+  </template>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
